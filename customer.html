@@ -8,15 +8,44 @@
 
     <style>
 
+       /* .div1{
+            !*width: 100vw;*!
+            !*height: 50px;*!
+            background-color: dodgerblue;
+            display: flex;
+        }*/
+
+
         .search{
+            position: absolute;
             width: 700px;
             left: 30px;
+            justify-content: space-between;
+            top: 100px;
         }
 
         .custable{
-            bottom: 0;
+            position: absolute;
+            bottom: 120px;
         }
 
+        .add{
+            position: absolute;
+           top: 150px;
+            right: 400px;
+        }
+
+        .update{
+            position: absolute;
+            right: 300px;
+            top: 150px;
+        }
+
+        .delete{
+            position: absolute;
+            right: 200px;
+            top: 150px;
+        }
 
 
 
@@ -25,26 +54,31 @@
 </head>
 <body>
 
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">FoodsCo Super Mart</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        <a class="nav-link" href="#">Customer</a>
-                        <a class="nav-link" href="#">Items</a>
-                        <a class="nav-link" href="#">Orders</a>
+    <div class="div1">
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Super Mart</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <!--<a class="nav-link active" aria-current="page" href="#">Home</a>-->
+                            <a class="nav-link customer" href="#">Customer</a>
+                            <a class="nav-link" href="#">Items</a>
+                            <a class="nav-link" href="#">Orders</a>
 
+                        </div>
                     </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
 
-    </header>
+        </header>
+
+
+    </div>
+
 
 
 
@@ -61,38 +95,38 @@
         </div>
     </div>
 
-    <button type="button" class="btn btnViewall">View all customers</button>
 
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Add new customer
-    </button>
+    <button type="button" class="btn btn-success add" data-bs-toggle="modal" data-bs-target="#addCustomer">Add</button>
+    <button type="button" class="btn btn-warning update" data-bs-toggle="modal" data-bs-target="#updateCustomer">Update</button>
+    <button type="button" class="btn btn-danger delete">Delete</button>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal" tabindex="-1" id="addCustomer">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add new customer</h1>
+                    <h5 class="modal-title">Add new customer</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="formGroupExampleInput" class="form-label">Customer ID :</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput cusID" >
+                        <input type="text" class="form-control" id="formGroupExampleInput id" >
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Customer name :</label>
                         <input type="text" class="form-control" id="formGroupExampleInput2" >
                     </div>
+
                     <div class="mb-3">
-                        <label for="formGroupExampleInput2" class="form-label">Customer address :</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput2 cusAdd" >
+                        <label for="formGroupExampleInput" class="form-label">Customer address :</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput address" >
                     </div>
                     <div class="mb-3">
-                        <label for="formGroupExampleInput2" class="form-label">Customer contact :</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput2 cusContact" >
+                        <label for="formGroupExampleInput2" class="form-label">Contact number :</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2 contact" >
                     </div>
+
 
                 </div>
                 <div class="modal-footer">
@@ -102,6 +136,46 @@
             </div>
         </div>
     </div>
+
+    <div class="modal" tabindex="-1" id="updateCustomer">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Update customer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Customer ID :</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput updateid" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Customer name :</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2 updatename" >
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Customer address :</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput updateaddress" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Contact number :</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2 updatecontact" >
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
 
     <table class="table custable">
         <thead>
