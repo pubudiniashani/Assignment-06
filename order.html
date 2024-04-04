@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order form</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+
+        body{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .header{
+           background-color: #7986CB;
+            color: white;
+        }
+
+
+        .container{
+            padding: 2px;
+            margin: 0;
+        }
+
+        .card1{
+            background-color: dodgerblue;
+            width: 500px;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card1-body{
+            width: 500px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .orderId{
+            width: 200px;
+        }
+
+        .cusId{
+            width: 200px;
+            right: 50px;
+        }
+
+        .date{
+            width: 200px;
+            top: 10px;
+        }
+
+        .card2{
+            background-color: #7986CB;
+            width: 450px;
+            bottom: 195px;
+            left: 530px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card2-body{
+            width: 500px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .itemName{
+            width: 150px;
+
+        }
+
+        .itemCode{
+            width: 150px;
+        }
+
+        .quantity{
+            width: 150px;
+        }
+
+        .price{
+            width: 150px;
+        }
+
+        .qty{
+            width: 150px;
+        }
+
+       .add{
+           width: 100px;
+           height: 40px;
+           position: absolute;
+           top: 220px;
+           left: 250px;
+           
+       }
+
+       .card3{
+           background-color: mediumpurple;
+           width: 350px;
+           bottom: 485px;
+           left: 1000px;
+           display: flex;
+           flex-direction: row;
+           justify-content: center;
+           align-items: center;
+       }
+
+       .card3-body{
+           display: grid;
+           grid-template-columns: repeat(2, 1fr);
+       }
+
+       .total{
+           width: 150px;
+       }
+
+       .sub-total{
+           width: 150px;
+       }
+
+       .amount{
+           width: 150px;
+       }
+
+       .discount{
+           width: 150px;
+       }
+
+       .balance{
+           width: 150px;
+       }
+
+        .purchase{
+            width: 100px;
+            height: 40px;
+            position: absolute;
+            top: 220px;
+            left: 200px;
+        }
+
+        .tblorder{
+            position: absolute;
+            top: 400px;
+        }
+
+    </style>
+
+
+
+
+</head>
+<body>
+
+
+        <nav class="navbar navbar-expand-lg  header">
+            <div class="container-fluid header3">
+                <a class="navbar-brand"   href="#">Super Mart</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <!--<a class="nav-link active" aria-current="page" href="#">Home</a>-->
+                        <a class="nav-link customer" href="#">Customer</a>
+                        <a class="nav-link" href="#">Items</a>
+                        <a class="nav-link" href="#">Orders</a>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+     <div class="container">
+
+        <div class="card card1">
+            <div class="card-body card1-body ">
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Order ID :</label>
+                    <input type="text" class="form-control orderId" id="formGroupExampleInput" >
+                </div>
+                <div class="mb-3 ">
+                    <label for="formGroupExampleInput2" class="form-label">Customer ID :</label>
+                    <input type="text" class="form-control cusId" id="formGroupExampleInput2" >
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Date :</label>
+                    <input type="text" class="form-control date" id="formGroupExampleInput2 date" >
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card card2">
+            <div class="card-body card2-body">
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Item name</label>
+                    <input type="text" class="form-control itemName" id="formGroupExampleInput " >
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Item code</label>
+                    <input type="text" class="form-control itemCode" id="formGroupExampleInput2 ">
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Quantity</label>
+                    <input type="text" class="form-control quantity" id="formGroupExampleInput quantity">
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Price</label>
+                    <input type="text" class="form-control price" id="formGroupExampleInput2 price">
+                </div>
+
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Quantity on order</label>
+                    <input type="text" class="form-control qty" id="formGroupExampleInput qty" >
+                </div>
+
+
+                <button type="button" class="btn btn-success add">Add</button>
+            </div>
+        </div>
+
+         <div class="card card3">
+             <div class="card-body card3-body">
+                 <div class="mb-3">
+                     <label for="formGroupExampleInput" class="form-label">Total</label>
+                     <input type="text" class="form-control total" id="formGroupExampleInput total" >
+                 </div>
+                 <div class="mb-3">
+                     <label for="formGroupExampleInput2" class="form-label">Sub total</label>
+                     <input type="text" class="form-control sub-total" id="formGroupExampleInput2 subtotal">
+                 </div>
+                 <div class="mb-3">
+                     <label for="formGroupExampleInput" class="form-label">Paid amount</label>
+                     <input type="text" class="form-control amount" id="formGroupExampleInput amount" >
+                 </div>
+                 <div class="mb-3">
+                     <label for="formGroupExampleInput2" class="form-label">Discount</label>
+                     <input type="text" class="form-control discount" id="formGroupExampleInput2 discount">
+                 </div>
+                 <div class="mb-3">
+                     <label for="formGroupExampleInput" class="form-label">Balance</label>
+                     <input type="text" class="form-control balance" id="formGroupExampleInput balance">
+                 </div>
+
+
+                 <button type="button" class="btn btn-warning purchase">Purchase</button>
+
+
+             </div>
+         </div>
+
+         <table class="table tblorder">
+             <thead>
+             <tr>
+                 <th scope="col">#</th>
+                 <th scope="col">First</th>
+                 <th scope="col">Last</th>
+                 <th scope="col">Handle</th>
+             </tr>
+             </thead>
+             <tbody>
+             <tr>
+                 <th scope="row">1</th>
+                 <td>Mark</td>
+                 <td>Otto</td>
+                 <td>@mdo</td>
+             </tr>
+             <tr>
+                 <th scope="row">2</th>
+                 <td>Jacob</td>
+                 <td>Thornton</td>
+                 <td>@fat</td>
+             </tr>
+             <tr>
+                 <th scope="row">3</th>
+                 <td colspan="2">Larry the Bird</td>
+                 <td>@twitter</td>
+             </tr>
+             </tbody>
+         </table>
+
+      </div>
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
