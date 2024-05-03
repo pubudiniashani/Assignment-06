@@ -79,6 +79,230 @@
 
         }
 
+        .searchitem{
+            position: absolute;
+            width: 700px;
+            left: 30px;
+            justify-content: space-between;
+            top: 100px;
+        }
+
+        .add{
+            position: absolute;
+            top: 150px;
+            right: 300px;
+        }
+
+        .update{
+            position: absolute;
+            right: 200px;
+            top: 150px;
+        }
+
+        .delete{
+            position: absolute;
+            right: 100px;
+            top: 150px;
+        }
+
+        .itemTable{
+            position: absolute;
+            bottom: 120px;
+        }
+
+        @media all and (max-width: 768px){
+            .searchitem{
+                width: 400px;
+                left: 30px;
+                top: 200px;
+            }
+
+            .add{
+                top: 370px;
+                right: 300px;
+            }
+
+            .update{
+                right: 200px;
+                top: 370px;
+            }
+
+            .delete{
+                right: 100px;
+                top: 370px;
+            }
+
+            .itemTable{
+                bottom: 0;
+            }
+        }
+
+        .container{
+            padding: 2px;
+            margin: 0;
+        }
+
+        .card1{
+            background-color: dodgerblue;
+            width: 500px;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card1-body{
+            width: 500px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .orderId{
+            width: 200px;
+        }
+
+        .cusId{
+            width: 200px;
+            right: 50px;
+        }
+
+        .date{
+            width: 200px;
+            top: 10px;
+        }
+
+        .card2{
+            background-color: #7986CB;
+            width: 450px;
+            bottom: 195px;
+            left: 530px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card2-body{
+            width: 500px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .itemName{
+            width: 150px;
+
+        }
+
+        .itemCode{
+            width: 150px;
+        }
+
+        .quantity{
+            width: 150px;
+        }
+
+        .price{
+            width: 150px;
+        }
+
+        .qty{
+            width: 150px;
+        }
+
+        .add{
+            width: 100px;
+            height: 40px;
+            position: absolute;
+            top: 220px;
+            left: 250px;
+
+        }
+
+        .card3{
+            background-color: mediumpurple;
+            width: 350px;
+            bottom: 485px;
+            left: 1000px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card3-body{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .total{
+            width: 150px;
+        }
+
+        .sub-total{
+            width: 150px;
+        }
+
+        .amount{
+            width: 150px;
+        }
+
+        .discount{
+            width: 150px;
+        }
+
+        .balance{
+            width: 150px;
+        }
+
+        .purchase{
+            width: 100px;
+            height: 40px;
+            position: absolute;
+            top: 220px;
+            left: 200px;
+        }
+
+        .tblorder{
+            position: absolute;
+            top: 400px;
+        }
+
+        @media all and (max-width: 768px){
+            .card1{
+                width: 350px;
+                top: 10px;
+                left: 10px;
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            .card1-body{
+                width: 300px;
+                display: grid;
+                /*grid-template-columns: repeat(2, 1fr);*/
+                grid-template-rows: repeat(1, 1fr);
+            }
+
+            .orderId{
+                width: 150px;
+            }
+
+            .cusId{
+                width: 150px;
+                right: 50px;
+            }
+
+            .date{
+                width: 150px;
+                top: 10px;
+            }
+
+
+        }
+
     </style>
 
 
@@ -100,7 +324,7 @@
                         <!--<a class="nav-link active" aria-current="page" href="#">Home</a>-->
                         <span class="nav-link customer" id="nav-customer">Customer</span>
                         <span class="nav-link" id="nav-item">Items</span>
-                        <a class="nav-link" href="order.html">Orders</a>
+                        <span class="nav-link" id="nav-orders">Orders</span>
 
                     </div>
                 </div>
@@ -360,6 +584,121 @@
 
 </section>
 
+<!--order section-->
+<section id="order-section">
+    <div class="container">
+
+        <div class="card card1">
+            <div class="card-body card1-body ">
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Order ID :</label>
+                    <input type="text" class="form-control orderId" id="formGroupExampleInput" >
+                </div>
+                <div class="mb-3 ">
+                    <label for="formGroupExampleInput2" class="form-label">Customer ID :</label>
+                    <input type="text" class="form-control cusId" id="formGroupExampleInput2" >
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Date :</label>
+                    <input type="text" class="form-control date" id="formGroupExampleInput2 date" >
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card card2">
+            <div class="card-body card2-body">
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Item name</label>
+                    <input type="text" class="form-control itemName" id="formGroupExampleInput " >
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Item code</label>
+                    <input type="text" class="form-control itemCode" id="formGroupExampleInput2 ">
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Quantity</label>
+                    <input type="text" class="form-control quantity" id="formGroupExampleInput quantity">
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Price</label>
+                    <input type="text" class="form-control price" id="formGroupExampleInput2 price">
+                </div>
+
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Quantity on order</label>
+                    <input type="text" class="form-control qty" id="formGroupExampleInput qty" >
+                </div>
+
+
+                <button type="button" class="btn btn-success add">Add</button>
+            </div>
+        </div>
+
+        <div class="card card3">
+            <div class="card-body card3-body">
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Total</label>
+                    <input type="text" class="form-control total" id="formGroupExampleInput total" >
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Sub total</label>
+                    <input type="text" class="form-control sub-total" id="formGroupExampleInput2 subtotal">
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Paid amount</label>
+                    <input type="text" class="form-control amount" id="formGroupExampleInput amount" >
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Discount</label>
+                    <input type="text" class="form-control discount" id="formGroupExampleInput2 discount">
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Balance</label>
+                    <input type="text" class="form-control balance" id="formGroupExampleInput balance">
+                </div>
+
+
+                <button type="button" class="btn btn-warning purchase">Purchase</button>
+
+
+            </div>
+        </div>
+
+        <table class="table tblorder">
+            <thead>
+            <tr>
+                <th scope="col">Order ID</th>
+                <th scope="col">Customer name</th>
+                <th scope="col">Item</th>
+                <th scope="col">Balance</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td colspan="2"></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+</section>
 
 <script src="assets/lib/jquery-3.7.1.min.js.js"></script>
 
@@ -369,18 +708,29 @@
 
     $('#customer-section').css({display: 'block'});
     $('#item-section').css({display: 'none'});
+    $('#order-section').css({display: 'none'});
 
     $('#nav-customer').on('click',()=>{
         console.log("customer-nav")
         $('#customer-section').css({display: 'block'});
         $('#item-section').css({display: 'none'});
+        $('#order-section').css({display: 'none'});
     });
 
     $('#nav-item').on('click',()=>{
-        console.log("customer-nav")
+        console.log("item-nav")
         $('#customer-section').css({display: 'none'});
         $('#item-section').css({display: 'block'});
+        $('#order-section').css({display: 'none'});
     });
+
+    $('#nav-orders').on('click',()=>{
+        $('#customer-section').css({display: 'none'});
+        $('#item-section').css({display: 'none'});
+        $('#order-section').css({display: 'block'})
+    });
+
+
 
 
 
