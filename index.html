@@ -98,8 +98,8 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <!--<a class="nav-link active" aria-current="page" href="#">Home</a>-->
-                        <a class="nav-link customer" href="customer.html">Customer</a>
-                        <a class="nav-link" href="item.html">Items</a>
+                        <span class="nav-link customer" id="nav-customer">Customer</span>
+                        <span class="nav-link" id="nav-item">Items</span>
                         <a class="nav-link" href="order.html">Orders</a>
 
                     </div>
@@ -367,7 +367,20 @@
 
 <script>
 
+    $('#customer-section').css({display: 'block'});
+    $('#item-section').css({display: 'none'});
 
+    $('#nav-customer').on('click',()=>{
+        console.log("customer-nav")
+        $('#customer-section').css({display: 'block'});
+        $('#item-section').css({display: 'none'});
+    });
+
+    $('#nav-item').on('click',()=>{
+        console.log("customer-nav")
+        $('#customer-section').css({display: 'none'});
+        $('#item-section').css({display: 'block'});
+    });
 
 
 
