@@ -1,0 +1,70 @@
+.container{
+    padding: 2px;
+    margin: 0;
+}
+
+.header{
+    background-color: #7986CB;
+    z-index: 1000;
+}
+
+
+.search{
+    position: absolute;
+    width: 600px;
+    left: 180px;
+    justify-content: space-between;
+    top: 100px;
+}
+
+.custable{
+    position: absolute;
+    bottom: 120px;
+}
+
+.add{
+    position: absolute;
+    top: 150px;
+    right: 300px;
+}
+
+.update{
+    position: absolute;
+    right: 200px;
+    top: 150px;
+}
+
+.delete{
+    position: absolute;
+    right: 100px;
+    top: 150px;
+}
+
+@media all and (max-width: 768px) {
+    .search {
+
+        width: 400px;
+        left: 100px;
+        top: 200px;
+    }
+
+    .custable {
+        bottom: 0;
+    }
+
+    .add {
+        top: 370px;
+        right: 300px;
+    }
+
+    .update {
+        top: 370px;
+        right: 200px;
+    }
+
+    .delete {
+        top: 370px;
+        right: 100px;
+    }
+
+}
