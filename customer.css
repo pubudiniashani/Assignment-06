@@ -1,52 +1,54 @@
-.container{
-    padding: 2px;
-    margin: 0;
+#nav-bar{
+    padding: 0;
+    top: 0;
 }
+
 
 .header{
     background-color: #7986CB;
     z-index: 1000;
 }
 
-
-.search{
-    position: absolute;
-    width: 600px;
-    left: 180px;
-    justify-content: space-between;
-    top: 100px;
+#customer-card{
+    margin-left: 20px;
 }
+
+#customer{
+    margin-left: 30px;
+}
+
 
 .custable{
-    position: absolute;
-    bottom: 120px;
+    position: relative;
+    /*bottom: 120px;*/
+    width: 95vw;
+    top: 90px;
+    border: 1px solid black;
+    margin-left: 20px;
+    margin-right: 20px;
+
 }
 
-.add{
-    position: absolute;
-    top: 150px;
-    right: 300px;
+.addCustomer{
+    position: relative;
+    top: 60px;
+    /*right: 300px;*/
+    left: 300px;
 }
 
-.update{
-    position: absolute;
-    right: 200px;
-    top: 150px;
+.updateCustomer{
+    position: relative;
+    top: 60px;
+    left: 400px;
 }
 
-.delete{
-    position: absolute;
-    right: 100px;
-    top: 150px;
+.deleteCustomer{
+    position: relative;
+    top: 60px;
+    left: 500px;
 }
 
 @media all and (max-width: 768px) {
-    .search {
-
-        width: 400px;
-        left: 100px;
-        top: 200px;
-    }
 
     .custable {
         bottom: 0;

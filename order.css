@@ -1,0 +1,180 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.header{
+    background-color: #7986CB;
+    color: white;
+}
+
+
+.container{
+    padding: 2px;
+    margin: 0;
+}
+
+.card1{
+    background-color: #c1d3fe;
+    width: 500px;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card1-body{
+    width: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.orderId{
+    width: 200px;
+}
+
+.cusId{
+    width: 200px;
+    right: 50px;
+}
+
+.date{
+    width: 200px;
+    top: 10px;
+}
+
+.card2{
+    background-color: #abc4ff;
+    width: 450px;
+    bottom: 195px;
+    left: 530px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card2-body{
+    width: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.itemName{
+    width: 150px;
+
+}
+
+.itemCode{
+    width: 150px;
+}
+
+.quantity{
+    width: 150px;
+}
+
+.price{
+    width: 150px;
+}
+
+.qty{
+    width: 150px;
+}
+
+.add{
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    top: 220px;
+    left: 250px;
+    background-color: #065a82;
+}
+
+.card3{
+    background-color: #b6ccfe;
+    width: 350px;
+    bottom: 485px;
+    left: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card3-body{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.total{
+    width: 150px;
+}
+
+.sub-total{
+    width: 150px;
+}
+
+.amount{
+    width: 150px;
+}
+
+.discount{
+    width: 150px;
+}
+
+.balance{
+    width: 150px;
+}
+
+.purchase{
+    width: 100px;
+    height: 45px;
+    position: absolute;
+    top: 220px;
+    left: 200px;
+    background-color: #1c7293;
+    color: white;
+}
+
+.tblorder{
+    position: absolute;
+    top: 400px;
+}
+
+@media all and (max-width: 768px){
+    .card1{
+        width: 350px;
+        top: 10px;
+        left: 10px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .card1-body{
+        width: 300px;
+        display: grid;
+        /*grid-template-columns: repeat(2, 1fr);*/
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+    .orderId{
+        width: 150px;
+    }
+
+    .cusId{
+        width: 150px;
+        right: 50px;
+    }
+
+    .date{
+        width: 150px;
+        top: 10px;
+    }
+
+
+}
+
