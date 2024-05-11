@@ -1,0 +1,45 @@
+.div-header{
+    width: 100vw;
+    height: 80px;
+    background-color: #7986CB;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    font-style: italic;
+}
+
+.signup{
+    width: 450px;
+    height: 400px;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 50px;
+    margin: auto;
+    position: absolute;
+}
+
+.signupbtn{
+    background-color: #7986CB;
+    color: white;
+    position: relative;
+    top: 50px;
+    bottom: 0;
+    left: 175px;
+    right: 0;
+    margin: auto;
+}
+
+
+@media all and (max-width: 768px){
+    .signup{
+        width: 300px;
+    }
+
+    .signupbtn{
+        left: 90px;
+
+    }
+}

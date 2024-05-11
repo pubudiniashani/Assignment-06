@@ -9,9 +9,44 @@
     <link rel="stylesheet" href="customer.css">
     <link rel="stylesheet" href="item.css">
     <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="signup.css">
 
 </head>
 <body>
+
+<section id="signup-section">
+    <header>
+        <div class="div-header">
+            Super Mart
+        </div>
+    </header>
+
+    <div class="card signup">
+        <div class="card-body">
+            <div class="mb-3">
+                <label for="username" class="form-label">User name</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter your user name">
+            </div>
+            <div class="mb-3">
+                <label for="email-address" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email-address" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="text" class="form-control" id="password" placeholder="Enter password">
+            </div>
+
+            <!--<button type="button" class="btn signupbtn">SIGN UP</button>-->
+            <a href="login.html" class="btn btn-primary signupbtn">Sign Up</a>
+
+
+        </div>
+    </div>
+
+
+</section>
+
+<section id="dashboard">
 
 <!--header-->
 
@@ -74,7 +109,7 @@
     </div>
 </div>
 
-<button type="button" class="btn btn-success addCustomer" data-bs-toggle="modal" data-bs-target="#addCustomer">Add</button>
+<button type="button" class="btn btn-success addCustomer" id="customer-add" data-bs-toggle="modal" data-bs-target="#addCustomer">Add</button>
 <button type="button" class="btn btn-warning updateCustomer" data-bs-toggle="modal" data-bs-target="#updateCustomer">Update</button>
 <button type="button" class="btn btn-danger deleteCustomer">Delete</button>
 
@@ -89,19 +124,19 @@
             </thead>
             <tbody id="customer-tbl-body">
             <tr>
-                <th scope="row">1</th>
+                <th scope="row"></th>
                 <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
-                <th scope="row">2</th>
+                <th scope="row"></th>
                 <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
-                <th scope="row">3</th>
+                <th scope="row"></th>
                 <td ></td>
                 <td></td>
             </tr>
@@ -297,6 +332,8 @@
 
 </section>
 
+</section>
+
 <script src="assets/lib/jquery-3.7.1.min.js.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -305,9 +342,15 @@
 
     var customers = [];
 
+
+
     $('#customer-section').css({display: 'block'});
     $('#item-section').css({display: 'none'});
     $('#order-section').css({display: 'none'});
+    $(`#signup-section`).css({display:'none'});
+
+   /* $('#signup-section')*/
+
 
     $('#nav-customer').on('click',()=>{
         console.log("customer-nav")
@@ -330,7 +373,7 @@
     });
 
 
-    function loadTable(){
+   /* function loadTable(){
 
         $("#customer-tbl-body").empty();
 
@@ -338,7 +381,7 @@
 
             let record = <tr>
 
-                
+
 
 
             </tr>
@@ -349,11 +392,11 @@
     }
 
 
-
+*/
 
 </script>
 
 
-<script src="js/student.js"></script>
+<script type="module" src="customer.js"></script>
 </body>
 </html>
