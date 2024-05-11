@@ -1,6 +1,10 @@
 import CustomerModal from "./CustomerModal.js";
 
-var customers = [];
+import {customers} from "./db.js";
+
+/*var customers = [];*/
+
+var recordIndex;
 
 function loadTable(){
         $("#customer-tbl-body").empty();
@@ -9,9 +13,9 @@ function loadTable(){
 
                 let record = `<tr>
             <th scope="row" class="customer-id-value">${item.id}</th>
-            <td class="customer-firstname-value">${item.name}</td>
+            <td class="customer-name-value">${item.name}</td>
             <td class="customer-address-value">${item.address}</td>
-            <td class="customer-program-value">${item.contact}</td>
+            <td class="customer-contact-value">${item.contact}</td>
         </tr>`;
 
                 // console.log(record);
@@ -44,4 +48,41 @@ $('#customer-add').on('click',()=>{
 
     });
 
+$('#customer-update').on('click',()=>{
 
+        var cusId = $('#customerId').val();
+        var cusName = $('#name').val();
+        var cusAddress = $('#address').val();
+        var cusContact = $('#contact').val();
+
+        let customerObj = customers[recordIndex];
+        customerObj.id = cusId;
+        customerObj.name = cusName;
+        customerObj.address = cusAddress;
+        customerObj.contact = cusContact;
+
+        console.log("cus1 :" , customerObj);
+        console.log(("cus2 :" , customers[recordIndex]));
+
+        loadTable();
+
+});
+
+$('#customer-tbl-body').on('click','tr',function (){
+
+        let index = $(this).index();
+        recordIndex = index;
+        console.log(index);
+
+        let id = $(this).find(".customer-id-value").text();
+        let name = $(this).find(".customer-name-value").text();
+        let address = $(this).find(".customer-address-value").text();
+        let contact = $(this).find(".customer-contact-value").text();
+
+        $("#customerId").val(id);
+        $("#name").val(name);
+        $("#address").val(address);
+        $("#contact").val(contact);
+
+
+});
