@@ -94,10 +94,8 @@ $('#customer-tbl-body').on('click','tr',function (){
 
 });
 
-document.getElementById('customer-reset').addEventListener('click', function() {
-        document.getElementById('customerId').value = '';
-        document.getElementById('name').value = '';
-        document.getElementById('address').value = '';
-        document.getElementById('contact').value = '';
+$("#customer-reset").on('click', function() {
+        $('#customerId, #name, #address, #contact').val('');
 });
+
 

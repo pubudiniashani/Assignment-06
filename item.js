@@ -29,7 +29,6 @@ function loadItemTable(){
 
 }
 
-
 $('#item-add').on('click',()=>{
 
     var itemId = $('#itemId').val();
@@ -70,18 +69,15 @@ $('#item-update').on('click',()=>{
 
 });
 
-/*$("#item-delete").on('click',()=>{
+$("#item-delete").on('click',()=>{
 
-    items.splice(recordIndex,1)
+    items.splice(recordindex,1)
     loadItemTable();
     $("#item-reset").click();
-});*/
-
-$("#item-delete").on('click', () => {
-    items.splice(recordindex, 1);
-    loadItemTable();
-    $('#itemId, #itemName, #price, #quantity').val('');
+    console.log(items)
 });
+
+
 
 
 
@@ -104,9 +100,6 @@ $('#item-tbl-body').on('click','tr',function (){
 
 });
 
-document.getElementById('item-reset').addEventListener('click', function() {
-    document.getElementById('itemId').value = '';
-    document.getElementById('itemName').value = '';
-    document.getElementById('price').value = '';
-    document.getElementById('quantity').value = '';
+$("#item-reset").on('click', function() {
+    $('#itemId, #itemName, #price, #quantity').val('');
 });
