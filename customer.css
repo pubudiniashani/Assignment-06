@@ -33,19 +33,26 @@
     position: relative;
     top: 60px;
     /*right: 300px;*/
-    left: 300px;
+    left: 200px;
 }
 
 .updateCustomer{
     position: relative;
     top: 60px;
-    left: 400px;
+    left: 300px;
 }
 
 .deleteCustomer{
     position: relative;
     top: 60px;
+    left: 400px;
+}
+
+.resetCustomer{
+    position: relative;
+    top: 60px;
     left: 500px;
+
 }
 
 @media all and (max-width: 768px) {
@@ -54,17 +61,42 @@
         bottom: 0;
     }
 
-    .add {
+    .addCustomer {
         top: 370px;
         right: 300px;
     }
 
-    .update {
+    .updateCustomer {
         top: 370px;
         right: 200px;
     }
 
-    .delete {
+    .deleteCustomer {
+        top: 370px;
+        right: 100px;
+    }
+
+
+
+
+}
+
+@media all and (max-width: 580px) {
+    .custable {
+        bottom: 0;
+    }
+
+    .addCustomer {
+        top: 370px;
+        right: 300px;
+    }
+
+    .updateCustomer {
+        top: 370px;
+        right: 200px;
+    }
+
+    .deleteCustomer {
         top: 370px;
         right: 100px;
     }

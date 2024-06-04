@@ -68,6 +68,13 @@ $('#customer-update').on('click',()=>{
 
 });
 
+$("#customer-delete").on('click',()=>{
+
+        customers.splice(recordIndex,1)
+        loadTable();
+        $("#customer-reset").click();
+});
+
 $('#customer-tbl-body').on('click','tr',function (){
 
         let index = $(this).index();
@@ -86,3 +93,11 @@ $('#customer-tbl-body').on('click','tr',function (){
 
 
 });
+
+document.getElementById('customer-reset').addEventListener('click', function() {
+        document.getElementById('customerId').value = '';
+        document.getElementById('name').value = '';
+        document.getElementById('address').value = '';
+        document.getElementById('contact').value = '';
+});
+

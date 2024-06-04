@@ -1,27 +1,27 @@
 export default class ItemModal{
 
-    constructor(id,name,price,quantity) {
-        this._id = id;
-        this._name = name;
+    constructor(itemId,itemName,price,quantity) {
+        this._itemId = itemId;
+        this._itemName = itemName;
         this._price = price;
         this._quantity = quantity;
     }
 
 
-    get id() {
-        return this._id;
+    get itemId() {
+        return this._itemId;
     }
 
-    set id(value) {
-        this._id = value;
+    set itemId(value) {
+        this._itemId = value;
     }
 
-    get name() {
-        return this._name;
+    get itemName() {
+        return this._itemName;
     }
 
-    set name(value) {
-        this._name = value;
+    set itemName(value) {
+        this._itemName = value;
     }
 
     get price() {

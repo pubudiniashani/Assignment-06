@@ -32,6 +32,12 @@
     left: 400px;
 }
 
+.resetItem{
+    position: relative;
+    top: 50px;
+    left: 500px;
+}
+
 .itemTable{
     position: absolute;
     width: 95vw;
