@@ -1,6 +1,6 @@
-import CustomerModal from "./CustomerModal.js";
+import CustomerModal from "./model/CustomerModal.js";
 
-import {customers} from "./db.js";
+import {customers} from "./db/db.js";
 
 /*var customers = [];*/
 
@@ -97,5 +97,7 @@ $('#customer-tbl-body').on('click','tr',function (){
 $("#customer-reset").on('click', function() {
         $('#customerId, #name, #address, #contact').val('');
 });
+
+
 
 

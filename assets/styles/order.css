@@ -1,12 +1,14 @@
 body{
     margin: 0;
     padding: 0;
-    overflow: hidden;
+   /* overflow: hidden;*/
+
+
 }
 
 .header{
     background-color: #7986CB;
-    color: white;
+
 }
 
 
@@ -17,19 +19,20 @@ body{
 
 .card1{
     background-color: #c1d3fe;
-    width: 500px;
-    top: 10px;
-    left: 10px;
+    width: 400px;
+    top: 20px;
+    left: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 .card1-body{
-    width: 500px;
+    width: 400px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
 }
 
 .orderId{
@@ -44,13 +47,14 @@ body{
 .date{
     width: 200px;
     top: 10px;
+    margin-bottom: 10px;
 }
 
 .card2{
     background-color: #abc4ff;
     width: 450px;
-    bottom: 195px;
-    left: 530px;
+    bottom: 250px;
+    left: 470px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -96,8 +100,8 @@ body{
 .card3{
     background-color: #b6ccfe;
     width: 350px;
-    bottom: 485px;
-    left: 1000px;
+    bottom: 540px;
+    left: 980px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -140,9 +144,14 @@ body{
 }
 
 .tblorder{
-    position: absolute;
-    top: 400px;
+    position: relative;
+    top: -350px;
+
 }
+
+
+
+
 
 @media all and (max-width: 768px){
     .card1{

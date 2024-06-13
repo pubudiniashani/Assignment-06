@@ -6,10 +6,10 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="customer.css">
-    <link rel="stylesheet" href="item.css">
-    <link rel="stylesheet" href="order.css">
-    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="assets/styles/customer.css">
+    <link rel="stylesheet" href="assets/styles/item.css">
+    <link rel="stylesheet" href="assets/styles/order.css">
+    <link rel="stylesheet" href="assets/styles/signup.css">
 
 </head>
 <body>
@@ -228,43 +228,72 @@
         <div class="card card1">
             <div class="card-body card1-body ">
                 <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label">Order ID :</label>
-                    <input type="text" class="form-control orderId" id="formGroupExampleInput" >
-                </div>
-                <div class="mb-3 ">
-                    <label for="formGroupExampleInput2" class="form-label">Customer ID :</label>
-                    <input type="text" class="form-control cusId" id="formGroupExampleInput2" >
+                    <label for="od" class="form-label">Order ID :</label>
+                    <input type="text" class="form-control orderId" id="od" >
                 </div>
                 <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">Date :</label>
-                    <input type="text" class="form-control date" id="formGroupExampleInput2 date" >
+                    <label for="date" class="form-label">Date :</label>
+                    <input type="text" class="form-control date" id="date" >
                 </div>
+                <div class="mb-3 ">
+                    <!--<label for="formGroupExampleInput2" class="form-label">Customer ID :</label>
+                    <input type="text" class="form-control cusId" id="formGroupExampleInput2" >-->
+
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Customer Id
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">I001</a></li>
+                            <li><a class="dropdown-item" href="#">I002</a></li>
+                            <li><a class="dropdown-item" href="#">I003</a></li>
+                            <li><a class="dropdown-item" href="#">I004</a></li>
+                            <li><a class="dropdown-item" href="#">I005</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+
             </div>
         </div>
 
 
         <div class="card card2">
             <div class="card-body card2-body">
+
                 <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label">Item name</label>
-                    <input type="text" class="form-control itemName" id="formGroupExampleInput " >
+                   <!-- <label for="formGroupExampleInput2" class="form-label">Item code</label>
+                    <input type="text" class="form-control itemCode" id="formGroupExampleInput2 ">-->
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Item Id
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">I001</a></li>
+                            <li><a class="dropdown-item" href="#">I002</a></li>
+                            <li><a class="dropdown-item" href="#">I003</a></li>
+                            <li><a class="dropdown-item" href="#">I004</a></li>
+                            <li><a class="dropdown-item" href="#">I005</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">Item code</label>
-                    <input type="text" class="form-control itemCode" id="formGroupExampleInput2 ">
+                    <label for="in" class="form-label">Item name</label>
+                    <input type="text" class="form-control itemName" id="in" >
                 </div>
                 <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label">Quantity</label>
-                    <input type="text" class="form-control quantity" id="formGroupExampleInput quantity">
+                    <label for="iq quantity" class="form-label">Quantity</label>
+                    <input type="text" class="form-control quantity" id="iq quantity">
                 </div>
                 <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">Price</label>
-                    <input type="text" class="form-control price" id="formGroupExampleInput2 price">
+                    <label for="itemPrice" class="form-label">Price</label>
+                    <input type="text" class="form-control price" id="itemPrice">
                 </div>
 
                 <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label">Quantity on order</label>
-                    <input type="text" class="form-control qty" id="formGroupExampleInput qty" >
+                    <label for="it qty" class="form-label">Quantity on order</label>
+                    <input type="text" class="form-control qty" id="it qty" >
                 </div>
 
 
@@ -275,24 +304,24 @@
         <div class="card card3">
             <div class="card-body card3-body">
                 <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label">Total</label>
-                    <input type="text" class="form-control total" id="formGroupExampleInput total" >
+                    <label for="total" class="form-label">Total</label>
+                    <input type="text" class="form-control total" id="total" >
                 </div>
                 <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">Sub total</label>
-                    <input type="text" class="form-control sub-total" id="formGroupExampleInput2 subtotal">
+                    <label for="oSubtotal" class="form-label">Sub total</label>
+                    <input type="text" class="form-control sub-total" id="oSubtotal">
                 </div>
                 <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label">Paid amount</label>
-                    <input type="text" class="form-control amount" id="formGroupExampleInput amount" >
+                    <label for="paidAmount" class="form-label">Paid amount</label>
+                    <input type="text" class="form-control amount" id="paidAmount" >
                 </div>
                 <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">Discount</label>
-                    <input type="text" class="form-control discount" id="formGroupExampleInput2 discount">
+                    <label for="disc" class="form-label">Discount</label>
+                    <input type="text" class="form-control discount" id="disc">
                 </div>
                 <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label">Balance</label>
-                    <input type="text" class="form-control balance" id="formGroupExampleInput balance">
+                    <label for="balance" class="form-label">Balance</label>
+                    <input type="text" class="form-control balance" id="balance">
                 </div>
 
 
@@ -306,7 +335,7 @@
             <thead>
             <tr>
                 <th scope="col">Order ID</th>
-                <th scope="col">Customer name</th>
+                <th scope="col">Customer ID</th>
                 <th scope="col">Item</th>
                 <th scope="col">Balance</th>
             </tr>
@@ -384,19 +413,14 @@
         customers.map((item, index) =>{
 
             let record = <tr>
-
-
-
-
-            </tr>
+             </tr>
         });
-
-
-
-    }
+ }
 
 
 */
+
+
 
 </script>
 

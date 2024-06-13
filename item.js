@@ -1,6 +1,6 @@
-import ItemModal from "./ItemModal.js";
+import ItemModal from "./model/ItemModal.js";
 
-import {customers, items} from "./db.js";
+import {customers, items} from "./db/db.js";
 
 /*var items = [];*/
 
