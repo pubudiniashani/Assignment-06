@@ -12,11 +12,12 @@ body{
 }
 
 
+
+/*
 .container{
     padding: 2px;
     margin: 0;
 }
-
 .card1{
     background-color: #c1d3fe;
     width: 400px;
@@ -37,6 +38,7 @@ body{
 
 .orderId{
     width: 200px;
+
 }
 
 .cusId{
@@ -93,7 +95,7 @@ body{
     height: 40px;
     position: absolute;
     top: 220px;
-    left: 250px;
+    left: 350px;
     background-color: #065a82;
 }
 
@@ -143,6 +145,10 @@ body{
     color: white;
 }
 
+#customerIdDropdown{
+    width: 200px;
+}
+
 .tblorder{
     position: relative;
     top: -350px;
@@ -153,8 +159,8 @@ body{
 
 
 
-@media all and (max-width: 768px){
-    .card1{
+@media all and (max-width: 768px) {
+    .card1 {
         width: 350px;
         top: 10px;
         left: 10px;
@@ -163,23 +169,23 @@ body{
 
     }
 
-    .card1-body{
+    .card1-body {
         width: 300px;
         display: grid;
-        /*grid-template-columns: repeat(2, 1fr);*/
+        !*grid-template-columns: repeat(2, 1fr);*!
         grid-template-rows: repeat(1, 1fr);
     }
 
-    .orderId{
+    .orderId {
         width: 150px;
     }
 
-    .cusId{
+    .cusId {
         width: 150px;
         right: 50px;
     }
 
-    .date{
+    .date {
         width: 150px;
         top: 10px;
     }
@@ -187,3 +193,6 @@ body{
 
 }
 
+
+
+*/

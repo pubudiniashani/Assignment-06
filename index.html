@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="assets/styles/item.css">
     <link rel="stylesheet" href="assets/styles/order.css">
     <link rel="stylesheet" href="assets/styles/signup.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
 </head>
 <body>
@@ -37,7 +40,7 @@
             </div>
 
             <!--<button type="button" class="btn signupbtn">SIGN UP</button>-->
-            <a href="login.html" class="btn btn-primary signupbtn">Sign Up</a>
+            <a href="pages/login.html" class="btn btn-primary signupbtn">Sign Up</a>
 
 
         </div>
@@ -170,7 +173,7 @@
             <div class="form-group row">
                 <label for="price" class="col-sm-3 col-form-label">Price:</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" id="price">
+                    <input type="text" class="form-control" id="price" placeholder="Rs.">
                 </div>
             </div>
             <div class="form-group row">
@@ -223,7 +226,92 @@
 
 <!--order section-->
 <section id="order-section">
-    <div class="container">
+    <div class="container mt-5">
+        <div class="row">
+
+            <div class="col-lg-4 col-md-6 col-sm-12 card-custom">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Order Details</h5>
+                        <form>
+                            <div class="form-group">
+                                <label for="orderID">Order ID</label>
+                                <input type="text" class="form-control" id="orderID">
+                            </div>
+                            <div class="form-group">
+                                <label for="orderDate">Order Date</label>
+                                <input type="date" class="form-control" id="orderDate">
+                            </div>
+                            <div class="form-group">
+                                <label for="custID">Customer ID</label>
+                                <input type="text" class="form-control" id="custID" placeholder="Enter Customer ID">
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6 col-sm-12 card-custom">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Item Details</h5>
+                        <form>
+                            <div class="form-group">
+                                <label for="item-ID">Item ID</label>
+                                <input type="text" class="form-control" id="item-ID" >
+                            </div>
+                            <div class="form-group">
+                                <label for="item-Name">Item Name</label>
+                                <input type="text" class="form-control" id="item-Name" >
+                            </div>
+                            <div class="form-group">
+                                <label for="item-Price">Price</label>
+                                <input type="text" class="form-control" id="item-Price">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="quantityOnHand">Quantity on Hand</label>
+                                <input type="number" class="form-control" id="quantityOnHand">
+                            </div>
+                            <div class="form-group">
+                                <label for="item-Quantity">Quantity</label>
+                                <input type="number" class="form-control" id="item-Quantity" >
+                            </div>
+                            <button type="button" class="btn btn-primary btn-block">Add Item</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="col-lg-4 col-md-6 col-sm-12 card-custom">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Summary</h5>
+                        <form>
+                            <div class="form-group">
+                                <label for="totalAmount">Total</label>
+                                <input type="text" class="form-control" id="totalAmount" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="discount">Discount</label>
+                                <input type="text" class="form-control" id="discount" >
+                            </div>
+                            <div class="form-group">
+                                <label for="balance">Balance</label>
+                                <input type="text" class="form-control" id="balance"  readonly>
+                            </div>
+                            <button type="button" class="btn btn-success btn-block">Purchase</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--<div class="container">
 
         <div class="card card1">
             <div class="card-body card1-body ">
@@ -236,21 +324,26 @@
                     <input type="text" class="form-control date" id="date" >
                 </div>
                 <div class="mb-3 ">
-                    <!--<label for="formGroupExampleInput2" class="form-label">Customer ID :</label>
-                    <input type="text" class="form-control cusId" id="formGroupExampleInput2" >-->
+                    &lt;!&ndash;<label for="formGroupExampleInput2" class="form-label">Customer ID :</label>
+                    <input type="text" class="form-control cusId" id="formGroupExampleInput2" >&ndash;&gt;
 
-                    <div class="dropdown">
+                    &lt;!&ndash;<div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Customer Id
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">I001</a></li>
+                            &lt;!&ndash;<li><a class="dropdown-item" href="#">I001</a></li>
                             <li><a class="dropdown-item" href="#">I002</a></li>
                             <li><a class="dropdown-item" href="#">I003</a></li>
                             <li><a class="dropdown-item" href="#">I004</a></li>
-                            <li><a class="dropdown-item" href="#">I005</a></li>
+                            <li><a class="dropdown-item" href="#">I005</a></li>&ndash;&gt;
                         </ul>
-                    </div>
+                    </div>&ndash;&gt;
+
+                    <select class="form-control" id="customerIdDropdown">
+                        &lt;!&ndash;<option value="" disabled selected> Customer ID</option>&ndash;&gt;
+                    </select>
+
 
 
                 </div>
@@ -263,9 +356,9 @@
             <div class="card-body card2-body">
 
                 <div class="mb-3">
-                   <!-- <label for="formGroupExampleInput2" class="form-label">Item code</label>
-                    <input type="text" class="form-control itemCode" id="formGroupExampleInput2 ">-->
-                    <div class="dropdown">
+                   &lt;!&ndash; <label for="formGroupExampleInput2" class="form-label">Item code</label>
+                    <input type="text" class="form-control itemCode" id="formGroupExampleInput2 ">&ndash;&gt;
+                    &lt;!&ndash;<div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Item Id
                         </button>
@@ -276,8 +369,14 @@
                             <li><a class="dropdown-item" href="#">I004</a></li>
                             <li><a class="dropdown-item" href="#">I005</a></li>
                         </ul>
-                    </div>
+                    </div>&ndash;&gt;
+
+                    <select class="form-control" id="itemIdDropdown">
+                        &lt;!&ndash; Customer IDs will be loaded here &ndash;&gt;
+                        <option value="" disabled selected>Item ID</option>
+                    </select>
                 </div>
+
                 <div class="mb-3">
                     <label for="in" class="form-label">Item name</label>
                     <input type="text" class="form-control itemName" id="in" >
@@ -329,7 +428,7 @@
 
 
             </div>
-        </div>
+        </div>-->
 
         <table class="table tblorder">
             <thead>
@@ -362,6 +461,8 @@
         </table>
 
     </div>
+
+
 
 </section>
 
@@ -425,7 +526,9 @@
 </script>
 
 
-<script type="module" src="customer.js"></script>
-<script type="module" src="item.js"></script>
+<script type="module" src="controller/customer.js"></script>
+<script type="module" src="controller/item.js"></script>
+<script type="module" src="controller/order.js"></script>
+
 </body>
 </html>
